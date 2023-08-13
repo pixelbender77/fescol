@@ -1,0 +1,126 @@
+.footer__container {
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: black;
+    padding: 70px 0 25px; /* 70px padding at the top, 10px padding at the bottom and 0 at the corners since footer-col deals with that already*/
+    
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    /*position: absolute;*/ /* This line makes footer to be fixed*/
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    flex-flow: column nowrap;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    /* Titles underline*/
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #1e65e9;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    /* adding some bottom margin between the li items.(except on the last one as you may have noticed*/
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    transition: all 0.3s ease-out;
+}
+
+.footer-col ul li a:hover , .footer-col ul li a:focus {
+    color: yellow;
+    transform: scale(1.1);
+    padding-right: 8px;
+    
+}
+
+.facebook:hover, .facebook:focus {
+    color: #1e65e9;
+}
+
+.instagram:hover, .instagram:focus {
+    color: rgb(235, 74, 227);
+}
+
+.linkedIn:hover, .linkedIn:focus {
+    color: lightblue;
+}
+
+
+/* RESPONSIVENES*/
+
+@media (max-width: 767px) {
+    /* the maximum width to do this is 767*/
+    .footer-col {
+        width: 50%; /*Adjusting the width size */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    /* the maximum width to do this is 574*/
+    .footer-col {
+        width: 100%;
+    }
+}
+
+
+.footer__brand{
+    
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+    flex-direction: column;
+}
+.footer__logo{
+    padding-top: 30px;
+    width: 250px;
+    height: auto;
+}
+.footer__copyright{
+    padding-top: 40px;
+    color: #bbbbbb;
+    text-align: center;
+}
+.developer-site-link, .developer-site-link a:any-link{
+    font-size: 0.6rem;
+    color: #696969;
+}
+.developer-site-link a:hover{
+    color:yellow;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <a href="tel:+237677686431" class="floating-btn call"><img src="assets/icons/phone.svg" alt="call a school administrator"></a>
+    <a href="#" class="floating-btn"><img src="assets/icons/up_svg.svg" alt="back to top of screen icon"></a>
+    <!--To top of page botton-->
+    <header>
+        <nav class="navbar ">
+            <!-- Navbar logo-->
+            <div class="logo ">
+                <a href="index.html" class="brand-name">Fescol Education</a>
+            </div>
+            <!-- Navbar links-->
+            <ul class="links ">
+                <li><a href="# "> Information</a></li>
+                <li>
+                    <a href="# ">Evenements</a>
+                </li>
+                <li><a href="# ">Campus</a></li>
+                <li>
+                    <a href="# "> A propos</a>
+                </li>
+            </ul>
+            <!--Action button-->
+            <a href="# " class="action-btn ">Contactez nous</a>
+            <!-- menu button-->
+            <button href="# " class="menu-btn ">
+                <div class="menu-icon "></div>
+            </button>
+        </nav>
+        <!-- Dropdown-->
+        <div class="dropdown_menu ">
+            <li><a href="# "> Information</a></li>
+            <li>
+                <a href="# ">Evenements</a>
+            </li>
+            <li><a href="# ">Campus</a></li>
+            <li>
+                <a href="# "> A propos</a>
+            </li>
+            <li><a href="# " class="action-btn ">Contactez nous</a></li>
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <h1 class="paragraph--l__title to-left"> Contact</h1>
+        <section class="contact__wrapper contact">
+            <!-- the contact class here is used as for a reference.(BEM convenction)-->
+            <div class="contact__box">
+                <img class="contact__icon" src="assets/icons/location-pin.svg" alt="location-pin">
+                <h1 class="contact__title">Position</h1>
+                <p class="contact__element">Yaounde , Nkolmesseng</p>
+            </div>
+            <div class="contact__box">
+                <img class="contact__icon" src="assets/icons/phone.svg" alt="location-pin">
+                <h1 class="contact__title">Telephone</h1>
+                <p class="contact__element nowrap">+237 6 77 52 23 38</p>
+                <p class="contact__element nowrap">+237 6 77 68 64 31</p>
+            </div>
+            <div class="contact__box">
+                <img class="contact__icon" src="assets/icons/mail-letter.svg" alt="location-pin">
+                <h1 class="contact__title">EMAIL</h1>
+                <p class="contact__element">fescol2011@yahoo.fr</p>
+            </div>
+            <div class="contact__box">
+                <img class="contact__icon" src="assets/icons/socials-star.svg" alt="location-pin">
+                <h1 class="contact__title">Reseaux</h1>
+                <img class="contact__social-icon" src="assets/icons/facebook.svg" alt="facebook logo">
+                <p class="nowrap ">
+                    <a class="contact__social-link" href="#">Fescol education</a>
+                </p>
+            </div>
+        </section>
+        <h1 class="section-title to-left">Laissez un message</h1>
+        <form action="#" method="get" class="contact__form">
+            <legend class="offscreen">Send us a message</legend>
+            <label class="contact_label" for="name">Nom</label>
+            <input class="contact__input" type="text" id="name" name="name">
+            <label class="contact_label" for="email">Email</label>
+            <input class="contact__input" type="email" id="email" name="email">
+            <label class="contact_label" for="message">Message</label>
+            <textarea class="contact__message" name="message" id="message" cols="30" rows="10"></textarea>
+            <button class="common-btn" type="submit">Envoyer</button>
+        </form>
+
+        <p class="section-title">
+            Here we are
+        </p>
+        <section class="map"></section>
+
+
+
+
+
+
+    </main>
+
+    <!-- ===[ SCRIPT INJECTION ]=== -->
+    <script src="js/header.js " defer></script>
+    <script src="js/counter.js " defer></script>
+    <script src="js/main.js " defer></script>
+
+    <!-- defer in the script tag means that the whole page is going to load first before
+   the javascript file loads-->
+</body>
+
+<footer class="footer ">
+    <section class="footer__container ">
+        <div class="row ">
+            <div class="footer-col ">
+                <h4>sections</h4>
+                <ul>
+                    <li><a href="# ">Anglophone</a></li>
+                    <li><a href="# ">Francophone</a></li>
+                    <li><a href="# ">Bilinguisme integral</a></li>
+                </ul>
+            </div>
+            <div class="footer-col ">
+                <h4>nos cycles</h4>
+                <ul>
+                    <li>
+                        <a href="# ">Primaire</a>
+                    </li>
+                    <li><a href="# ">Maternelle</a></li>
+                    <li><a href="# ">Creche</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col ">
+                <h4>L'etablissement</h4>
+                <ul>
+                    <li><a href="# ">Contactez nous</a></li>
+                    <li><a href="# ">Apropos</a></li>
+                    <li><a href="# ">Campus</a></li>
+                    <li><a href="# ">Information</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col ">
+                <h4>suivez nous</h4>
+                <div class="social-links ">
+                    <li><a href="# " class="facebook ">Facebook</a></li>
+                    <li><a href="# " class="instagram ">Instagram</a></li>
+                    <li><a href="# " class="linkedIn ">LinkedIn</a></li>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="footer__brand">
+        <div class="footer__logo">
+            <!-- no styling was really applied to this footer logo-->
+            <figure><img src="assets/images/logo_png.png" alt="Fescol Logo" width="250px" height="auto">
+                <figcaption class="offscreen">Fescol's Logo</figcaption>
+            </figure>
+        </div>
+
+    </section>
+    <section class="footer__copyright">
+        <p><span class="nowrap">Copyright &copy; <time id="year"></time></span>
+            <span class="nowrap">Fescol Education</span>
+        </p>
+        <p class="developer-site-link">Made with 🤍 by
+            <a href="#">Green Code Digital</a>
+        </p>
+    </section>
+
+</footer>
+
+</html>
+
+</html>

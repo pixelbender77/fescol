@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==== VARIABLES ===== */
+
+
+/* == Colors == */
+
+:root {
+    --BG: #E4E4E4;
+    --WHITE-TITLE: #E4E4E4;
+    --MAIN-BLUE: #1E65E9;
+    --LIGHT-BLUE: #BDCEEF;
+    --GREY-TEXT: #353535;
+    --DARK-BLUE: #1C3462;
+    /* == Borders == */
+    --BORDER-RADIUS: 15px;
+    --PAGE-CORNER-MARGIN: clamp(0.1rem, 5.0vw, 5.5rem);
+    /* == Margins === */
+    --BODY-ELEMENT-MARGIN: 60px;
+    --BODY-ELEMENT-PADDING: 30px;
+    --BREATH-MARGIN: 15px;
+}
+
+
+/*  GENERAL SETTINGS*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a:visited {
+    color: #FFF;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+a:hover,
+a:focus {
+    color: yellow;
+}
+
+
+body {
+    min-height: 100vh;
+    /*background-image: url('../assets/images/home_background.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* === UTILITIES & GENERAL COMPONENTS=== */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    /*This is generally for screen readers*/
+    position: absolute;
+    left: -10000px;
+}
+
+.newline {
+    display: block;
+}
+
+.to-left {
+    align-self: flex-start;
+}
+
+.to-right {
+    align-self: flex-end;
+}
+
+.self-align-center {
+    align-self: center;
+}
+
+.left-breath{
+    padding-left: var(--BREATH-MARGIN);
+}
+.right-breath{
+    padding-right: var(--BREATH-MARGIN);
+}
+
+.separator {
+    width: 100%;
+    height: 12px;
+    margin-bottom: 50px;
+    background-color: var(--MAIN-BLUE);
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: clamp(1.2em, 4.5vh, 2em);
+    color: rgb(53, 53, 53);
+    align-self: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.upper-band {
+    display: flex;
+    width: 100%;
+    height: 31%;
+    position: absolute;
+    top: 0;
+    background-color: var(--DARK-BLUE);
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+@media screen and (max-width: 576px) {
+    /* making responsive the logo in the upper band. (shrinks in smaller devices)*/
+    .upper-band__logo {
+        transform: scale(0.8);
+    }
+}
+
+/* Show on scroll stylings */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-20%);
+    transition: all 1s ease-out;
+    
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+
+
+
+/*ACCESORIES*/
+
+.floating-btn {
+    color: #FFF;
+    background-color: #1e65e9;
+    padding: 1rem;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 5%;
+}
+
+.floating-btn::before {
+    /*content: "\2191";*/
+    font-weight: bolder;
+}
+
+.floating-btn:hover {
+    opacity: 0.5;
+    transform: translateY(-5px);
+    transition: all 0.5s ease-in;
+}
+
+.floating-btn img {
+    width: 12px;
+    height: auto;
+}
+
+.call {
+    bottom: 15%;
+    padding: 1.2rem;
+    background-color: var(--LIGHT-BLUE);
+}
+
+
+/* ===INDIVIDUAL STYLINGs ===*/
+
+.main {
+    /* Styling the main*/
+    display: flex;
+    /*justify-content: center; /* This line was placing content in the center*/
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    /* The main will be a parent element*/
+    /*background-color: aquamarine;*/
+    background-color: var(--BG);
+    min-height: 100vh;
+    /*margin: 0.5rem auto; /* 0.5rem padding on the bottom and top and 2 on the corners*/
+    padding: 0.5rem var(--PAGE-CORNER-MARGIN);
+    /* === RESPONSIVE MAIN ===*/
+    /* 0.5rem padding on the top and bottom and clamp on the corners*/
+    padding-bottom: 50px;
+    /* 50px space between footer and page content*/
+}
+
+
+/*  COUNTER / WRAPPER  */
+
+.counters-wrapper {
+    /*border: 1px solid black;*/
+    /*position: absolute;*/
+    /*This line and the one below(transform) aren't useful since we want the counters not to overlap or be above other elements.. okay? */
+    width: 80vw;
+    /*top: 50%;*/
+    /* May have to put this back or remove.. check that out*/
+    display: flex;
+    /*transform: translate(-50%, -50%);*/
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.counter-container {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    font-size: 16px;
+    /*border-radius: 0.5em;*/
+    background-color: white;
+    border-bottom: 10px solid #1e65e9;
+    box-shadow: 0 2px 12px rgba(1, 1, 1, 0.411);
+    ;
+    margin-bottom: 50px;
+}
+
+.exam-title {
+    color: #1e65e9;
+    font-size: clamp(1em, 2.5vh, 1.2em);
+    text-align: center;
+    font-weight: bold;
+}
+
+span.num {
+    color: rgb(53, 53, 53);
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.percentage {
+    font-weight: 600;
+    font-size: 2em;
+    color: rgb(53, 53, 53);
+}
+
+span.text {
+    color: #000;
+    font-size: 1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+}
+
+.counters-section__title {
+    margin: 2rem;
+    font-weight: 600;
+    font-size: clamp(1.2em, 4.5vh, 2em);
+    color: rgb(53, 53, 53);
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .counters-wrapper {
+        width: 85vw;
+    }
+    .counter-container {
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .counters-wrapper {
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .counter-container {
+        width: (50% - 40px);
+        height: 30vmin;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .counters-wrapper {
+        gap: 15px;
+    }
+    .counter-container {
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
+    .exam-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ====== Language Toggle ======= */
+.toggle-switch {
+    position: relative;
+    width: 2rem;
+    height: 1rem;
+    background-color: #FFF;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--LIGHT-BLUE);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.toggle-input:checked + .toggle-label {
+    transform: translateX(100%);
+}
+
+
+
+/*   IMAGE SLIDER*/
+
+.imgSlider {
+    width: 100%;
+    height: 61vh;
+    background-image: url('../assets/images/home_background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: #0000004b 0px 8px 12px;
+    animation: changeImage 20s none infinite;
+    /*parent side*/
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 50px;
+    border-radius: 0 0 5px 5px;
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url('../assets/images/slide1.jpg');
+        animation-delay: 10s;
+    }
+    20% {
+        background-image: url('../assets/images/slide2.jpg');
+        animation-delay: 10s;
+    }
+    40% {
+        background-image: url('../assets/images/slide3.jpg');
+        animation-delay: 10s;
+    }
+    60% {
+        background-image: url('../assets/images/slide4.jpg');
+        animation-delay: 10s;
+    }
+    80% {
+        background-image: url('../assets/images/slide5.jpg');
+        animation-delay: 10s;
+    }
+    100% {
+        background-image: url('../assets/images/slide1.jpg');
+    }
+}
+
+
+/* School name , welcome all that above the slider*/
+
+.slider__message-container {
+    /*width: calc(40%+1rem); /*This is for the box to fit the content*/
+    width: 100%;
+    height: 30%;
+    min-width: 300px;
+    background-color: #050114c7;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    /*backdrop-filter: blur(10px);*/
+    /*border-radius: 15px;*/
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+.slider__logo {
+    width: 100px;
+    height: auto;
+}
+
+.slider__title {
+    font-size: 3.1vh;
+    color: var(--WHITE-TITLE);
+    text-align: center;
+    font-weight: bold;
+}
+
+.slider__content {
+    font-size: 2.1vh;
+    color: #a8bfeb;
+    font-style: italic;
+}
+
+
+/* RESPONSIVENESS*/
+
+
+/*MOBILES*/
+
+@media screen and (max-width: 992px) {
+    .slider__title {
+        font-size: 1.1em;
+    }
+    .slider__content {
+        font-size: 0.8em;
+    }
+}
+
+
+/* mini mobile(iPhone 5 etc..)*/
+
+@media screen and (max-width: 320px) {
+    .slider__message-container {
+        min-width: 280px;
+        height: 32%;
+    }
+    .slider__title {
+        font-size: 1em;
+    }
+}
+
+
+/* === Introductory Message === */
+
+.intro-message__container {
+    display: flex;
+    justify-content: start;
+    align-self: flex-start;
+    padding: var(--BODY-ELEMENT-PADDING);
+}
+
+.intro-message__container p {
+    font-weight: 600;
+    font-size: clamp(1.2em, 4.5vh, 2em);
+    color: rgb(53, 53, 53);
+}
+
+
+/* === Information paragraphs === */
+
+
+/*left paragraph*/
+
+.paragraph--l {
+    margin-bottom: var(--BODY-ELEMENT-MARGIN);
+    width: 100%;
+    align-self: flex-start;
+}
+
+.paragraph--l__title {
+    font-size: min(2rem, 5.2vw);
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.paragraph--l__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--MAIN-BLUE);
+    height: 5px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.paragraph--l__content {
+    align-self: flex-start;
+    width: 75%;
+}
+
+
+/*Right paragraph*/
+
+.paragraph--r {
+    margin-bottom: var(--BODY-ELEMENT-MARGIN);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.paragraph--r__title {
+    margin-bottom: 18px;
+    position: relative;
+    /*making title parent because of blue underline*/
+    align-self: flex-end;
+}
+
+.paragraph--r__content {
+    align-self: flex-end;
+    width: 75%;
+}
+
+.paragraph--r__title::before {
+    /*blue line under title*/
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: var(--MAIN-BLUE);
+    height: 5px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+
+/*RESPONSIVENESS OF PARAGRAPH*/
+
+@media screen and (max-width: 767px) {
+    .paragraph--r__content {
+        width: 90%;
+    }
+    .paragraph--l__content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .paragraph--r__content {
+        width: 100%;
+    }
+    .paragraph--l__content {
+        width: 100%;
+    }
+}
+
+
+/*button*/
+
+.see-more:any-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--MAIN-BLUE);
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--WHITE-TITLE);
+}
+
+.see-more:hover {
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+
+/* === Colored Zone === */
+
+.colored-zone {
+    background-color: var(--LIGHT-BLUE);
+    padding: var(--BODY-ELEMENT-PADDING);
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    /*position: relative;*/
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+/*img-left is the default so i'll not style it..*/
+
+.colored-zone__inner-row {
+    /*This row carries the text on one side and an image on the other*/
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.img-right {
+    flex-flow: row-reverse;
+}
+
+.with-title {
+    flex-flow: column;
+    align-items: start;
+}
+
+.colored-zone__title {
+    color: #000;
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
+
+.colored-zone__img {
+    width: 100%;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+
+/*RESPONSIVENESS*/
+
+@media screen and (max-width: 992px) {
+    .colored-zone__inner-row {
+        flex-flow: column;
+    }
+    .colored-zone__img {
+        margin-top: 15px;
+    }
+}
+
+
+/* === Moto section === */
+
+.motto {
+    padding: var(--BODY-ELEMENT-PADDING);
+    margin: var(--BODY-ELEMENT-MARGIN);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.motto__title {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.motto__words {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    color: var(--GREY-TEXT);
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* ============== ABOUT PAGE ============= */
+
+.about-image__container {
+    position: absolute;
+    top: 100%;
+    /* 35% from the top*/
+    left: 5%;
+    width: 35%;
+    height: 38%;
+    margin-left: var(--PAGE-CORNER-MARGIN);
+    background-color: #353535;
+    background-image: url('../assets/images/slide3.jpg');
+    background-size: cover;
+    /* let the image cover the container*/
+    background-position: center;
+    /*the center part of the image should be the focus*/
+    border-radius: var(--BORDER-RADIUS);
+    box-shadow: #00000056 0px 4px 8px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-image__container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-image__container {
+        width: 60%;
+    }
+}
+
+.about__title {
+    position: absolute;
+    top: 32%;
+    left: 8%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about__title--underline {
+    position: absolute;
+    top: 39%;
+    left: 8%;
+    height: 5px;
+    width: 75px;
+    background-color: var(--MAIN-BLUE);
+}
+
+.about__content {
+    position: absolute;
+    top: 42%;
+    left: 8%;
+    width: 90%;
+}
+
+
+/* ====================== CONTACT PAGE ================== */
+
+.contact__wrapper {
+    /*border: 1px solid #000;*/
+    margin-top: var(--BODY-ELEMENT-MARGIN);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: var(--LIGHT-BLUE);
+    /*height: 300px*/
+    /*No need really assigning a height here since it is a wrapper and it's since should and will adjust with the content*/
+}
+
+.contact__box {
+    width: 35vmin;
+    height: 40vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact__icon {
+    width: 12vmin;
+    height: auto;
+}
+
+.contact__title {
+    text-transform: uppercase;
+}
+
+.contact__element {
+    align-self: center;
+}
+
+.contact__social-icon {
+    width: 3vmin;
+    height: auto;
+}
+
+.contact__social-link:any-link {
+    color: var(--MAIN-BLUE);
+}
+
+.contact__social-link:hover {
+    font-weight: bold;
+    opacity: 0.8;
+    color: blue
+}
+
+@media screen and (max-width: 480px) {
+    .contact__element {
+        transform: scale(0.8);
+    }
+    .contact__title {
+        transform: scale(0.8);
+    }
+    .contact__wrapper {
+        flex-direction: row nowrap;
+        padding: 20px;
+    }
+}
+
+
+/* contact form*/
+
+.contact__form {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.contact__input,
+.contact__message {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.contact__input {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+}
+
+.common-btn {
+    width: 100px;
+    border-color: transparent;
+    padding: 0.5rem 1rem;
+    background-color: var(--MAIN-BLUE);
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--WHITE-TITLE);
+    font-weight: bolder;
+}
+
+.common-btn:hover {
+    opacity: 0.8;
+    background-color: #1b6fcfec;
+    transition: all 0.5s;
+}
+
+
+/*Responsiveness*/
+
+@media screen and (max-width: 992px) {
+    .contact__input,
+    .contact__message {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__input,
+    .contact__message {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact__input,
+    .contact__message {
+        width: 100%;
+    }
+}
+
+.contact__input:focus,
+.contact__message:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #1e65e977;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact__label {
+    display: inline-block;
+    /*making the block element makes it stand alone on it's line. That's what modern forms look like*/
+    font-weight: bold;
+    margin: 100px;
+}
+
+
+/*map*/
+
+.map {
+    display: flex;
+    width: 100%;
+    padding: 200px;
+    margin: 50px;
+    background-color: var(--DARK-BLUE);
+}
+
+
+/*  ======= CAMPUS PAGE ========== */
+
+.campus-image__container {
+    display: flex;
+    padding: 15vw 25vh;
+    width: 50vw;
+    height: auto;
+    /*margin-left: var(--PAGE-CORNER-MARGIN);*/
+    /* isn't needed */
+    background-color: #353535;
+    /*background-size: cover; /* let the image cover the container*/
+    /*background-position: center; /*the center part of the image should be the focus*/
+    border-radius: var(--BORDER-RADIUS);
+    box-shadow: #00000056 0px 4px 8px;
+    top: 0;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow__img {
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.slideshow__container {
+    max-width: 75%;
+    position: relative;
+    margin: auto;
+    top: 0;
+}
+
+
+/*responsive slideshow container*/
+
+@media screen and (max-width: 768px) {
+    .slideshow__container {
+        max-width: 100%;
+    }
+}
+
+.prev,
+.next {
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #E4E4E4;
+}
+
+.campus-slider__text {
+    color: #E4E4E4;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+    font-weight: bold;
+}
+
+
+/*
+.numbertext{
+    color: #E4E4E4;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+*/
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--LIGHT-BLUE);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--MAIN-BLUE);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/*RESPONSIVENESS*/
+
+@media screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+
+/* GENERAL ANIMATIONS*/
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    /*number of times animation is done*/
+    animation-duration: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    50% {
+        /*transform: translateX(-150px);*/
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
