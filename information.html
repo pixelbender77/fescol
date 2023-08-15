@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>Fescol Education</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/main.css">
@@ -18,21 +18,28 @@
         <nav class="navbar ">
             <!-- Navbar logo-->
             <div class="logo ">
-                <a href="index.html" class="brand-name">Fescol Education</a>
+                <a href="#" class="brand-name">Fescol Education</a>
             </div>
             <!-- Navbar links-->
             <ul class="links ">
-                <li><a href="# "> Information</a></li>
+                <li><a href="information.html"> Information</a></li>
                 <li>
-                    <a href="# ">Evenements</a>
+                    <a href="events.html">Evenements</a>
                 </li>
-                <li><a href="# ">Campus</a></li>
+                <li><a href="campus.html">Campus</a></li>
                 <li>
-                    <a href="# "> A propos</a>
+                    <a href="about.html"> A propos</a>
                 </li>
             </ul>
+            <!--language toggle-->
+            <div class="toggle-switch">
+                <input type="checkbox" id="language-toggle" class="toggle-input">
+                <label for="language-toggle" class="toggle-label"></label>
+            </div>
+
+
             <!--Action button-->
-            <a href="# " class="action-btn ">Contactez nous</a>
+            <a href="contact.html" class="action-btn ">Contactez nous</a>
             <!-- menu button-->
             <button href="# " class="menu-btn ">
                 <div class="menu-icon "></div>
@@ -40,15 +47,15 @@
         </nav>
         <!-- Dropdown-->
         <div class="dropdown_menu ">
-            <li><a href="# "> Information</a></li>
+            <li><a href="information.html"> Information</a></li>
             <li>
-                <a href="# ">Evenements</a>
+                <a href="events.html">Evenements</a>
             </li>
-            <li><a href="# ">Campus</a></li>
+            <li><a href="campus.html">Campus</a></li>
             <li>
-                <a href="# "> A propos</a>
+                <a href="about.html"> A propos</a>
             </li>
-            <li><a href="# " class="action-btn ">Contactez nous</a></li>
+            <li><a href="contact.html" class="action-btn ">Contactez nous</a></li>
         </div>
 
     </header>
@@ -64,21 +71,20 @@
         </section>
 
         <p class="section-title">Nos Sections</p>
-        <section class="paragraph--l">
+        <section class="paragraph--l" id="anglophone">
             <h1 class="paragraph--l__title">Section Anglophone</h1>
             <p class="paragraph--l__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam soluta optio assumenda atque debitis aspernatur minus perferendis ad, odit pariatur natus recusandae repellendus vel voluptates consectetur harum inventore. Voluptatem, accusantium!
                 Veniam aspernatur, praesentium voluptatem, d</p>
-
         </section>
 
-        <section class="paragraph--l">
+        <section class="paragraph--l" id="francophone">
             <h1 class="paragraph--l__title">Section Francophone</h1>
             <p class="paragraph--l__content">Lorem doloremque inventore, iste soluta quis reiciendis. Quisquam saepe aliquam soluta consequatur quaerat eum repellendus, vero consectetur. In, eligendi neque omnis nulla laborum deserunt. Doloremque, sequi ullam? Dolor hic placeat impedit
                 quisquam. Deleniti, corporis, odit ipsa nobis vel cupiditate tempore maiores corrupti esse quisquam quos necessitatibus veritatis aspernatur delectus dolorum, numquam ullam minima enim.</p>
 
         </section>
 
-        <section class="paragraph--l hidden">
+        <section class="paragraph--l hidden" id="integral-bilingualism">
             <h1 class="paragraph--l__title">Section Bilinguisme integral</h1>
             <p class="paragraph--l__content">Lorem doloremque inventore, iste soluta quis re maiores corrupti esse quisquam quos necessitatibus veritatis aspernatur delectus dolorum, numquam ullam minima enim.</p>
         </section>
@@ -112,17 +118,17 @@
 
         <p class="section-title">Nos Cycles</p>
 
-        <section class="colored-zone with-title">
+        <section class="colored-zone with-title" id="primary">
             <h1 class="colored-zone__title">Cycle Primaire</h1>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum doloribus obcaecati facilis quo. Fuga quisquam sit repellendus reprehenderit provident, earum modi autem vero et at id tempora expedita voluptatem? Architecto magnam facere ducimus
             doloribus laborum similique dolor laudantium deserunt error, expedita rem aut cum inventore amet perferendis assumenda sit iste. Nisi facere eos tempora deserunt ipsum nam impedit eum.
         </section>
-        <section class="colored-zone with-title">
+        <section class="colored-zone with-title" id="nursery">
             <h1 class="colored-zone__title">Cycle Maternelle</h1>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum doloribus obcaecati facilis quo. Fuga quisquam sit repellendus reprehenderit provident, earum modi autem vero et at id tempora expedita voluptatem? Architecto magnam facere ducimus
             doloribus laborum similique dolor laudantium deserunt error, expedita rem aut cum inventore amet perferendis assumenda sit iste. Nisi facere eos tempora deserunt ipsum nam impedit eum.
         </section>
-        <section class="colored-zone with-title">
+        <section class="colored-zone with-title" id="daycare">
             <h1 class="colored-zone__title">Crèche</h1>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum doloribus obcaecati facilis quo. Fuga quisquam sit repellendus reprehenderit provident, earum modi autem vero et at id tempora expedita voluptatem? Architecto magnam facere ducimus
             doloribus laborum similique dolor laudantium deserunt error, expedita rem aut cum inventore amet perferendis assumenda sit iste. Nisi facere eos tempora deserunt ipsum nam impedit eum.
@@ -147,29 +153,29 @@
             <div class="footer-col ">
                 <h4>sections</h4>
                 <ul>
-                    <li><a href="# ">Anglophone</a></li>
-                    <li><a href="# ">Francophone</a></li>
-                    <li><a href="# ">Bilinguisme integral</a></li>
+                    <li><a href="information.html#anglophone">Anglophone</a></li>
+                    <li><a href="information.html#francophone">Francophone</a></li>
+                    <li><a href="information.html#integral-bilingualism">Bilinguisme integral</a></li>
                 </ul>
             </div>
             <div class="footer-col ">
                 <h4>nos cycles</h4>
                 <ul>
                     <li>
-                        <a href="# ">Primaire</a>
+                        <a href="information.html#primary">Primaire</a>
                     </li>
-                    <li><a href="# ">Maternelle</a></li>
-                    <li><a href="# ">Creche</a></li>
+                    <li><a href="information.html#nursery">Maternelle</a></li>
+                    <li><a href="daycare.html">Creche</a></li>
 
                 </ul>
             </div>
             <div class="footer-col ">
                 <h4>L'etablissement</h4>
                 <ul>
-                    <li><a href="# ">Contactez nous</a></li>
-                    <li><a href="# ">Apropos</a></li>
-                    <li><a href="# ">Campus</a></li>
-                    <li><a href="# ">Information</a></li>
+                    <li><a href="contact.html">Contactez nous</a></li>
+                    <li><a href="about.html">Apropos</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="information.html">Information</a></li>
 
                 </ul>
             </div>
