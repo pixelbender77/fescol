@@ -87,6 +87,9 @@ body {
     display: block;
 }
 
+.bottom-breath{
+    margin-bottom: 100px;
+}
 .to-left {
     align-self: flex-start;
 }
