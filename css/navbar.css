@@ -8,18 +8,19 @@
 /*a:hover{
     color:yellow;
 }*/
- 
+
 
 /* VARIABLES*/
 
-:root{
-    --BG : #E4E4E4;
+:root {
+    --BG: #E4E4E4;
     --WHITE-TITLE: #E4E4E4;
     --MAIN-BLUE: #1E65E9;
     --LIGHT-BLUE: #BDCEEF;
     --GREY-TEXT: #353535;
     --DARKER-BLUE: #041127;
 }
+
 
 /* HEADER */
 
@@ -34,8 +35,7 @@ header {
     /* background-image: linear-gradient(to right, #051c3f, #01000f); */
     /*background-image: linear-gradient(to right, #28526A, #12191F);*/
     /*linear background color gradient on header*/
-    box-shadow:  0 0 5px 5px #04112757;
-
+    box-shadow: 0 0 5px 5px #04112757;
 }
 
 .navbar {
@@ -51,14 +51,13 @@ header {
     top: 0;
 }
 
-
-.navbar .logo .brand-name { /*BRAND NAME*/
-    color:white;
+.navbar .logo .brand-name {
+    /*BRAND NAME*/
+    color: white;
     /*color:  var(--DARKER-BLUE);*/
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 
 .navbar .links {
     display: flex;
@@ -113,7 +112,7 @@ header {
 
 .dropdown_menu.open {
     /* opens or make visible dropdown_menu*/
-    height: 240px;
+    height: 265px;
 }
 
 .dropdown_menu li {
