@@ -31,7 +31,7 @@ header {
     padding: 0 2rem;
     /*No padding on Top and Buttom but 2rem padding on Left and Right*/
     /*background-color: var(--LIGHT-BLUE);*/
-    background-image: linear-gradient(to right, #323f52, #040220);
+    background-image: linear-gradient(to right, #323f52, #193e69);
     /* background-image: linear-gradient(to right, #051c3f, #01000f); */
     /*background-image: linear-gradient(to right, #28526A, #12191F);*/
     /*linear background color gradient on header*/
