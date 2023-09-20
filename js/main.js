@@ -32,7 +32,7 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-function currenSlide(n) {
+function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 

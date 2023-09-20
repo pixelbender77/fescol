@@ -929,6 +929,12 @@ span.text {
 .mySlides {
     display: none;
 }
+.mySlides1 {
+    display: none;
+}
+.mySlides2 {
+    display: none;
+}
 
 .slideshow__img {
     vertical-align: middle;
