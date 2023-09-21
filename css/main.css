@@ -385,7 +385,7 @@ span.text {
         animation-delay: 10s;
     }
     40% {
-        background-image: url('../assets/images/topdown_assembly.jpg');
+        background-image: url('../assets/images/galery/crowd_1.JPG');
         animation-delay: 10s;
     }
     60% {
@@ -959,6 +959,7 @@ span.text {
 
 .prev,
 .next {
+    background-color: rgba(4, 149, 233, 0.521);
     color: black;
     cursor: pointer;
     position: absolute;
