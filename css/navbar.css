@@ -112,7 +112,7 @@ header {
 
 .dropdown_menu.open {
     /* opens or make visible dropdown_menu*/
-    height: 265px;
+    height: 300px;
 }
 
 .dropdown_menu li {
