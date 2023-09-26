@@ -377,15 +377,15 @@ span.text {
 
 @keyframes changeImage {
     0% {
-        background-image: url('../assets/images/slide1.jpg');
+        background-image: url('../assets/images/galery/crowd_1.JPG');
         animation-delay: 10s;
     }
     20% {
-        background-image: url('../assets/images/raising_flag.jpg');
+        background-image: url('../assets/images/slide1.jpg');
         animation-delay: 10s;
     }
     40% {
-        background-image: url('../assets/images/galery/crowd_1.JPG');
+        background-image: url('../assets/images/raising_flag.jpg');
         animation-delay: 10s;
     }
     60% {
