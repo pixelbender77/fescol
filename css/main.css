@@ -21,6 +21,8 @@
     --LIGHT-BLUE: #BDCEEF;
     --GREY-TEXT: #353535;
     --DARK-BLUE: #1C3462;
+    --DARKER-BLUE: #041127;
+
     /* == Borders == */
     --BORDER-RADIUS: 15px;
     --PAGE-CORNER-MARGIN: clamp(0.1rem, 5.0vw, 5.5rem);
@@ -131,7 +133,7 @@ body {
     height: 31%;
     position: absolute;
     top: 0;
-    background-color: var(--DARK-BLUE);
+    background-color: var(--DARKER-BLUE);
     justify-content: center;
     align-items: center;
     z-index: 0;
