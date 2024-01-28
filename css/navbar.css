@@ -26,7 +26,9 @@
 
 header {
     z-index: 1;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
     /* making the deader a parent*/
     padding: 0 2rem;
     /*No padding on Top and Buttom but 2rem padding on Left and Right*/
@@ -51,7 +53,7 @@ header {
     top: 0;
 }
 
-.navbar .logo .brand-name {
+p .navbar .logo .brand-name {
     /*BRAND NAME*/
     color: white;
     /*color:  var(--DARKER-BLUE);*/
