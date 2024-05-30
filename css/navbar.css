@@ -160,6 +160,7 @@ p .navbar .logo .brand-name {
 /*MENU ICON*/
 
 .menu-btn {
+    z-index: 0;
     background-color: transparent;
     border: none;
     width: 2.5rem;
@@ -173,6 +174,7 @@ p .navbar .logo .brand-name {
     /*making the element a parent*/
     cursor: pointer;
     display: none;
+    opacity: 80%;
     /* will be activated by media query*/
 }
 
@@ -186,6 +188,7 @@ p .navbar .logo .brand-name {
     border-radius: 5px;
     position: absolute;
     transition: all 0.5s;
+    z-index: 100 !important;
 }
 
 .menu-icon::before,
