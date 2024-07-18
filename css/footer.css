@@ -9,13 +9,17 @@
     flex-wrap: wrap;
 }
 
+
+/*Hello world!, wrote this to provoque a website build as it wasn't loading on the internet*/
+
 .footer {
     background-color: black;
-    padding: 70px 0 25px; /* 70px padding at the top, 10px padding at the bottom and 0 at the corners since footer-col deals with that already*/
-    
+    padding: 70px 0 25px;
+    /* 70px padding at the top, 10px padding at the bottom and 0 at the corners since footer-col deals with that already*/
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
-    /*position: absolute;*/ /* This line makes footer to be fixed*/
+    /*position: absolute;*/
+    /* This line makes footer to be fixed*/
     bottom: 0;
     width: 100%;
 }
@@ -61,22 +65,25 @@
     transition: all 0.3s ease-out;
 }
 
-.footer-col ul li a:hover , .footer-col ul li a:focus {
+.footer-col ul li a:hover,
+.footer-col ul li a:focus {
     color: yellow;
     transform: scale(1.1);
     padding-right: 8px;
-    
 }
 
-.facebook:hover, .facebook:focus {
+.facebook:hover,
+.facebook:focus {
     color: #1e65e9;
 }
 
-.instagram:hover, .instagram:focus {
+.instagram:hover,
+.instagram:focus {
     color: rgb(235, 74, 227);
 }
 
-.linkedIn:hover, .linkedIn:focus {
+.linkedIn:hover,
+.linkedIn:focus {
     color: lightblue;
 }
 
@@ -86,7 +93,8 @@
 @media (max-width: 767px) {
     /* the maximum width to do this is 767*/
     .footer-col {
-        width: 50%; /*Adjusting the width size */
+        width: 50%;
+        /*Adjusting the width size */
         margin-bottom: 30px;
     }
 }
@@ -98,29 +106,32 @@
     }
 }
 
-
-.footer__brand{
-    
+.footer__brand {
     display: flex;
     max-width: 1200px;
     margin: auto;
     align-items: start;
     flex-direction: column;
 }
-.footer__logo{
+
+.footer__logo {
     padding-top: 30px;
     width: 250px;
     height: auto;
 }
-.footer__copyright{
+
+.footer__copyright {
     padding-top: 40px;
     color: #bbbbbb;
     text-align: center;
 }
-.developer-site-link, .developer-site-link a:any-link{
+
+.developer-site-link,
+.developer-site-link a:any-link {
     font-size: 0.6rem;
     color: #696969;
 }
-.developer-site-link a:hover{
-    color:yellow;
+
+.developer-site-link a:hover {
+    color: yellow;
 }
